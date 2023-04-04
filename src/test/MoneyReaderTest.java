@@ -1,4 +1,4 @@
-package src.main.java.assignment.moneyreader;
+package src.test;
 
 import static org.junit.Assert.*;
 
