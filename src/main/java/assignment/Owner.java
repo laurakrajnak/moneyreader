@@ -1,12 +1,15 @@
 package src.main.java.assignment;
 
+import java.util.Arrays;
+
 public class Owner {
     private String name;
     private Wallet wallet;
 
-    public Owner(String name, String[] wallet) {
-        this.name = name;
-        this.wallet = new Wallet(wallet);
+    public Owner(String line) {
+        String[] splitLine = line.split(";", 0);
+        this.name = splitLine[0];
+        this.wallet = new Wallet(Arrays.copyOfRange(splitLine, 1, splitLine.length));
     }
 
     public String getName() {

@@ -26,6 +26,7 @@ public class Main {
             }
             if (!found) {
                 System.out.println("No person with name " + name);
+                found = false;
             }
         }
     }

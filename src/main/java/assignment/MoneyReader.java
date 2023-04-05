@@ -30,10 +30,9 @@ public class MoneyReader {
             System.exit(0);
         }
         while (scanFile.hasNextLine()) {
-            String name = scanFile.next().toLowerCase();
-            String[] wallet = scanFile.nextLine().split(";", 0);
+            String line = scanFile.nextLine().toLowerCase();
 
-            owners.add(new Owner(name, wallet));
+            owners.add(new Owner(line));
         }
     }
 }

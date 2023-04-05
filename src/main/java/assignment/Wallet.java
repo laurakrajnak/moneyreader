@@ -16,17 +16,18 @@ public class Wallet {
                 setBanknotes(value);
             }
         }
-        setMax();
-        setMin();
+        if (banknotes.isEmpty()) {
+            setBanknotes("0");
+        }
+        this.max = Collections.max(banknotes);
+        this.min = Collections.min(banknotes);
     }
 
     public int getMax() { return max; }
 
     public int getMin() { return min; }
 
-    private void setMax() { this.max = Collections.max(banknotes); }
-
-    private void setMin() { this.min = Collections.min(banknotes); }
+    public ArrayList<Integer> getBanknotes() { return banknotes; }
 
     private void setBanknotes(String value) {
         banknotes.add(Integer.parseInt(value));
